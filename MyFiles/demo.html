@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		
+		<title>HTML5 Example</title>
+
+		<script type="text/javascript">
+
+			function init() {
+				var can = document.getElementById("canvas");
+				var ctx = can.getContext("2d");
+
+				var img = new Image()
+				img.src = "../Exercise Files/rusty.jpg"
+				img.onload = function(){
+					ctx.drawImage(this, 300,300, 100, 100);
+				}
+
+
+				
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="init()">
+		
+		<canvas id="canvas" width="1024" height="768">
+			Canvas is not supported
+		</canvas>
+		
+	</body>
+
+</html>

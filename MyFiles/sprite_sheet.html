@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		
+		<title>HTML5 Example</title>
+
+		<script type="text/javascript" src="raf.js"></script>
+
+		<script type="text/javascript">
+
+				var img = new Image()
+				img.src = "../Exercise Files/sprite_sheet.png"
+				img.onload = draw;
+
+			function init() {
+				var ctx = document.getElementById("canvas").getContext("2d");
+			}
+
+			function draw(){
+				requestAnimationFrame(draw);
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="init()">
+		
+		<canvas id="canvas" width="1024" height="768">
+			Canvas is not supported
+		</canvas>
+		
+	</body>
+
+</html>

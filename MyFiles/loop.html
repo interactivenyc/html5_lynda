@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		
+		<title>HTML5 Example</title>
+		<script type="text/javascript" src="raf.js"></script>
+		<script type="text/javascript">
+
+			function init() {
+				loop();
+			}
+
+			function loop(){
+				requestAnimationFrame(loop)
+				console.log("loop");
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="init()">
+		
+		
+		
+	</body>
+
+</html>
