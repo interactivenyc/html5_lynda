@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		
+		<title>HTML5 Example</title>
+
+		<script type="text/javascript" src="raf.js"></script>
+		<script type="text/javascript">
+		
+			var dx = 0;
+			var dy = 0;
+			var x = 0;
+			var y = 0;
+			var d; //div
+
+			function init() {
+				d = document.getElementById("box");
+				dx = Math.random() * 800;
+				dy = Math.random() * 600;
+				
+				loop();
+				
+			}
+			
+			function loop(){
+				requestAnimationFrame(loop);
+				x += (dx - x) * 0.1;
+				y += (dy - y) * 0.1;
+				
+				d.style.width = x+"px"
+				d.style.height = y+"px"
+				
+				if (Math.abs(x-dx) < 1){
+					dx = Math.random() * 1024;
+					dy = Math.random() * 768;
+				
+				}
+				
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="init()">
+		
+		<div id="box" style="position:absolute; width:200px; height:200px; background-color:#0000ff;"></div>
+		
+	</body>
+
+</html>

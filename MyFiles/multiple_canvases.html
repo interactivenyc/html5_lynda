@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		
+		<title>HTML5 Example</title>
+
+		<script type="text/javascript">
+
+			function init() {
+				var ctx = document.getElementById("canvas").getContext("2d");
+				
+				var canvas2 = document.createElement("canvas");
+				canvas2.width = 200;
+				canvas2.height = 200;
+				
+				var ctx2 = canvas2.getContext("2d");
+				ctx2.fillStyle = "#0000ff";
+				ctx2.strokeStyle = "#000000";
+				ctx2.lineWidth = 10;
+				ctx2.fillRect(0,0,200,200);
+				ctx2.strokeRect(0,0,200,200);
+				
+				ctx.drawImage(canvas2, 100, 100);
+				
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="init()">
+		
+		<canvas id="canvas" width="1024" height="768">
+			Canvas is not supported
+		</canvas>
+		
+	</body>
+
+</html>
